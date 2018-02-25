@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nfnlabs.in.aruncolourpalletecheck.MainActivity">
+   <ImageView
+       android:id="@+id/ivProfile"
+       android:layout_width="match_parent"
+       android:scaleType="fitXY"
+       android:layout_height="250dp"/>
+    <LinearLayout
+        android:layout_below="@+id/ivProfile"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/rlDominant"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlVibrant"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:id="@+id/rlDarkMuted"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+        </RelativeLayout>
+        <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:id="@+id/rlLightVibrant"
+        android:layout_height="30dp">
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlLightMuted"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlMutant"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="50dp"
+        android:layout_margin="20dp"
+        android:id="@+id/fabGetColor"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="50dp" />
+
+
+</RelativeLayout>
