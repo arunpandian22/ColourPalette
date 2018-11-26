@@ -36,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton fabGetColor;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
@@ -47,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private Bitmap getBitmap() {
+    private Bitmap getBitmap()
+    {
 
         Bitmap bitmap = ((BitmapDrawable)ivProfile.getDrawable()).getBitmap();
 //        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.newyork);
@@ -56,10 +58,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.fabGetColor)
-    public void onViewClicked() {
-        colourPalleteUtil.getImageColorData(getBitmap(), new PalleteColourListener() {
+    public void onViewClicked()
+    {
+        colourPalleteUtil.getImageColorData(getBitmap(), new PalleteColourListener()
+        {
             @Override
-            public void getColurPallete(Palette pallete) {
+            public void getColurPallete(Palette pallete)
+            {
                 rlMutant.setBackgroundColor(pallete.getDarkMutedColor(pallete.getMutedColor(0)));
                 rlDominant.setBackgroundColor(pallete.getDominantColor(pallete.getLightVibrantColor(0)));
                 rlVibrant.setBackgroundColor(pallete.getVibrantColor(pallete.getLightVibrantColor(0)));

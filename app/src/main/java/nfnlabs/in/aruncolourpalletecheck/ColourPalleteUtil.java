@@ -18,16 +18,14 @@ public class ColourPalleteUtil {
         this.palleteColourListener=palleteColourListener;
         Palette.Builder builder = Palette.from(bitmap);
 
-        builder.generate(new Palette.PaletteAsyncListener() {
+        builder.generate(new Palette.PaletteAsyncListener()
+        {
             @Override
-            public void onGenerated(Palette palette) {
-
+            public void onGenerated(Palette palette)
+            {
               palleteColourListener.getColurPallete(palette);
             }
         }) ;
     }
-
-
-
 
 }
